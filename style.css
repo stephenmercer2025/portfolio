@@ -1,0 +1,316 @@
+/* Red Theme */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CSS Variables for Red Theme */
+:root {
+    --primary-color: #D32F2F; /* Dark Red */
+    --secondary-color: #FFCDD2; /* Light Red */
+    --accent-color: #E57373; /* Medium Red */
+    --error-color: #D32F2F; /* Red */
+    --background-color: #000;
+    --white-color: #fff;
+}
+
+/* General Layout */
+body {
+    min-height: 100vh;
+    background-color: var(--secondary-color); /* Light Red Background */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Container Styling */
+.container {
+    max-width: 980px;
+    padding: 3% 5%;
+    margin: 0 auto;
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+/* Headings */
+h2, h3, h4, h5, h6 {
+    line-height: 1.6;
+    color: var(--primary-color); /* Dark Red */
+}
+
+h1 {
+    font-size: 4em;
+    color: var(--secondary-color); /* Dark Red */
+
+}
+
+h2 {
+    font-family: serif;
+    font-size: 2.7em;
+}
+
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Navigation Styling */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 20px;
+}
+
+.nav-link {
+    color: var(--secondary-color); /* Light Red */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color); /* Dark Red */
+    padding-bottom: 16px;
+    border-bottom: 4px solid var(--white-color);
+}
+
+/* Hero Section */
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1604725333736-1f962a6218d0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjI2fHxyZWR8ZW58MHx8MHx8fDA%3D'); /* Red city lights or sunset */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title {
+    max-width: 600px;
+    padding: 5%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.title p {
+    font-size: 1.6em;
+    color: var(--white-color); /* White Text */
+    letter-spacing: 5px;
+}
+
+/* About Section */
+.aboutimg,
+.projectimg {
+    text-align: center;
+    height: 250px;
+    position: center;
+    transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+    margin-right: 20px;
+}
+
+.aboutimg:hover,
+.projectimg:hover {
+    opacity: 1;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/* Button Styling for Projects */
+.change1,
+.change2,
+.change3 {
+    font-style: oblique;
+    transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+}
+
+.change1 {
+    background-color: #E57373; /* Light Red */
+}
+
+.change1:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.change2 {
+    background-color: #FF5252; /* Medium Red */
+}
+
+.change2:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.change3 {
+    background-color: #D32F2F; /* Dark Red */
+}
+
+.change3:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Links */
+.links {
+    font-style: oblique;
+    transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+}
+
+.links:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Skills Gallery */
+.skills-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-gallery img {
+    max-width: 250px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+}
+
+.skills-gallery img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/* Contact Form */
+.contact-me {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 40px;
+    grid-template-areas:
+        "fName fName"
+        "lName lName"
+        "email email"
+        "credit ccv"
+        "bulkText bulkText"
+        "send send";
+}
+
+label {
+    position: relative;
+}
+
+.fname {
+    grid-area: fName;
+}
+
+.lname {
+    grid-area: lName;
+}
+
+.email {
+    grid-area: email;
+}
+
+.credit {
+    grid-area: credit;
+}
+
+.ccv {
+    grid-area: ccv;
+}
+
+.bulkText {
+    grid-area: bulkText;
+}
+
+.sendBut {
+    grid-area: send;
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 100%;
+}
+
+.error {
+    border-color: var(--error-color);
+    color: var(--error-color);
+}
+
+.error-message {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    bottom: 100%;
+    text-align: center;
+    font-size: .7em;
+    font-weight: 800;
+    background-color: var(--error-color);
+    padding: 1px 1px;
+    color: var(--white-color);
+    opacity: 70%;
+}
+
+.opaque {
+    opacity: 50%;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #D32F2F; /* Dark Red */
+    width: 100vw;
+    padding: 2% 5%;
+    font-size: 1.2em;
+    color: var(--white-color);
+    text-align: center;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 500px) {
+    .contact-me {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas:
+            "fName lName lName"
+            "email email email"
+            "credit credit ccv"
+            "bulkText bulkText bulkText"
+            "auto auto send";
+    }
+}
+
+@media (min-width: 700px) {
+    .contact-me {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "fName lName email"
+            "credit credit ccv"
+            "bulkText bulkText bulkText"
+            "auto auto send";
+    }
+}
